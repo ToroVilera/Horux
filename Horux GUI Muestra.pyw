@@ -725,13 +725,12 @@ if __name__=="__main__":
 									self.progreso1.set(cporcentual/100)
 									self.progreso1.update()
 
-
 									self.txtcountfiles.configure(text=count)
 									self.txtcountfiles.update()
 
 									self.textboxopt1.insert("0.0", "{}\n".format(path))
 
-									#Incrementar el count en el frame derecho, RESTAURAR AL FINAL
+									#Incrementar el count en el frame derecho
 									
 									#colaFdX1.put(path)
 									#return colaFdX1
@@ -837,7 +836,7 @@ if __name__=="__main__":
 
 
 			#ofrecer en este frame información: contador de amenazas y enlistar sus direcciones. y además...
-			#pequeño botón rojo suave para eliminar y registrarlos en un fichero externo
+			#botón rojo para eliminar y registrarlos en un fichero externo
 			self.estadoop1=CTkFrame(master=self.opt1frame, fg_color="#00000f",
 				height=180, width=240, border_width=1, border_color="#004d4d", corner_radius=10)
 			self.estadoop1.grid(row=0, column=4, rowspan=3, columnspan=2, padx=(0,0), pady=(10,0), sticky=("e"))
@@ -892,9 +891,7 @@ if __name__=="__main__":
 			self.setdb.grid(row=1, column=1, columnspan=1, rowspan=1, padx=(0,0), pady=(0,0), sticky=(""))
 			#si hay problemas de conexion, mostrar al usuario que configure la base de datos en local
 
-
-
-
+			
 			self.imgdiropt1=CTkLabel(master=self.optsetopt1, fg_color="#00000f", text="", image=self.img3c1)
 			self.imgdiropt1.grid(row=0, column=2, rowspan=3, padx=(0,0))
 
@@ -1094,12 +1091,7 @@ if __name__=="__main__":
 				fg_color="#00000f", text_color="#00cccc", font=("Calibri", 22, "bold"), compound="left")
 			self.resultopt5.grid(row=6, column=0, columnspan=6, padx=(0,0), pady=(30,0), sticky=(""))
 
-			#Info Restaur
 			self.resultopt5.configure(image=self.img1c5, text="  Consulta una dirección URL...", text_color="#00cccc")
-			#Alerta
-			
-			#Omision
-			
 
 			"""
 			self.img1c5 info
@@ -1159,9 +1151,6 @@ if __name__=="__main__":
 			self.tituloopt8=CTkLabel(master=self.opt8frame, text="Acerca de Horux", width=686, height=50,
 				fg_color="#00000f", text_color="#00cccc", font=("Calibri", 32))
 			self.tituloopt8.grid(row=0, column=0, columnspan=6, padx=(10,0), pady=(3,0), sticky=(""))
-
-
-
 
 			print("Informando...")
 			self.textboxopt8=CTkTextbox(master=self.opt8frame, width=686, height=300, corner_radius=10, text_color="#00cccc", 
